@@ -1,0 +1,49 @@
+@use "../base/_variables";
+
+
+body {
+    font-family: variables.$font-stack;
+    margin: 0;
+    padding: 0;
+    place-items: stretch;
+    min-height: 100vh;
+}
+
+header {
+    grid-area: header;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    grid-area: main;
+    display: grid;
+    place-items: center;
+    padding: 1em;
+
+}
+
+article {
+    max-width: 800px;
+    width: 90%;
+    padding: 1em;
+
+}
+
+footer {
+    background: variables.$secondary-color;
+    grid-area: footer;
+    padding: 1em;
+}
+
+#dog{
+    mix-blend-mode: multiply; //för lätt och snabbt göra en ljusare bakgrund genomskinlig: https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode
+    position: relative;
+    width: 200px;
+    height:auto;
+    left: 0;  
+    opacity: 0; //så att bilden inte syns från början
+}
+

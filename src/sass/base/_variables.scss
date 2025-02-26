@@ -1,0 +1,22 @@
+$font-stack:Arial, Helvetica, sans-serif;
+$text-line-height: 1.5;
+
+//lightmode
+$primary-color:#f1d5b9;
+$darker-color:darken($primary-color, 70%);
+$secondary-color: rgb(228, 172, 172);
+$lighter-color: lighten($secondary-color, 15%);
+
+//darkmode
+$primary-color-dm:#5a2a1d;
+$darker-color-dm:darken($primary-color, 70%);
+$secondary-color-dm: #e8d4c3;
+$lighter-color-dm: lighten($secondary-color, 15%);
+
+
+$breakpoint-tablet:1024px;
+$padding-tablet:1em;
+
+$breakpoint-mobile:600px;
+$padding-mobile:1.5em;
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../sass/main.scss">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Document</title>
+    <script src="../js/main.js" type="module" defer></script>
+</head>
+
+<body class="theme">
+    <div class="container">
+
+        <header>
+            <input type="checkbox" id="toggle" class="dropdown">
+            <label for="toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav id="main-nav">
+                <ul class="menu">
+                    <li><a href="index.html">Startsida</a></li>
+                    <li><a href="animation.html">Animering</a> </li>
+                    <li><a href="images.html">Galleri</a></li>
+                    <li><a href="#">Undersida4</a></li>
+                    <li><a href="#">Undersida5</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main">
+            <article>
+                <h1>Galleri</h1>
+                <picture>
+                    <source srcset="../images/Emmy.jpg?as=webp&width=300" type="image/webp" />
+                    <img src="../images/Emmy.jpg?width=300" alt="Närbild hunden Emmy" />
+                </picture>
+                <picture>
+                    <source srcset="../images/birdie.jpg?as=webp&width=300" type="image/webp" />
+                    <img src="../images/birdie.jpg?width=300" alt="Hunden Birdie" />
+                </picture>
+            </article>
+        </main>
+
+        <footer>
+            <span class="material-icons">email</span>
+            <span class="material-icons">phone</span>
+            <span class="material-icons">map</span>
+        </footer>
+
+    </div>
+</body>
+
+</html>

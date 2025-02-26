@@ -1,0 +1,25 @@
+@use "../base/_variables";
+
+
+// Stöd för ljust och mörkt tema med media query samt Selector inheritance ("@extend").
+
+.theme {
+    background-color:variables.$primary-color;
+    color:variables.$darker-color;
+}
+
+@media (prefers-color-scheme: dark){
+    .theme{
+        background-color: variables.$primary-color-dm;
+        color: variables.$secondary-color-dm;
+
+        nav{
+            background-color: variables.$secondary-color-dm;
+            color:variables.$primary-color-dm;
+        }
+
+        footer{
+            @extend nav;
+        }
+    }
+}

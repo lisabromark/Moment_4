@@ -1,0 +1,11 @@
+//fick hjälp av denna sida: https://dev.to/thebuildguy/easy-to-write-media-queries-using-sass-mixins-1p2f
+// använder mixin och else if
+
+@mixin respond($breakpoint){
+    @if $breakpoint == tablet {
+        @media (max-width:1024px) {@content;}
+    }
+    @else if $breakpoint == mobile {
+        @media (max-width:600px) {@content;}
+    }
+}

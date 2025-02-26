@@ -1,0 +1,75 @@
+@use "../base/_variables";
+@use "../layout/_grid";
+@use "../base/_mixins";
+
+nav {
+    background-color:variables.$secondary-color;
+    display: grid;
+    justify-content: center;
+    padding: 1.5em;
+}
+
+// Meny i desktop-läge och exempel på nesting
+
+.menu {
+    display: grid;
+    list-style: none;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    gap: 1em;
+
+    
+li {
+    margin: 0;
+  }
+
+a {
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    color:variables.$darker-color;
+}
+}
+
+//döljer den där lilla rutan
+
+.dropdown {
+    display:none;
+}
+
+@include mixins.respond(mobile){
+
+    .hamburger {
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+    span {
+        /*för visa varje linje på separat rad i den "tre-linjiga" hamburgermenyn*/
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: variables.$darker-color;
+        margin: 5px 0;
+    }
+    }
+
+    .menu{
+            display: none;
+            grid-template-columns: 1fr;
+            position: absolute;
+            background-color: variables.$lighter-color;
+            right: 10px;
+            top:45px;        
+    }
+    
+            /* visar menyn när hamburgermenyn är aktiv*/
+        .dropdown:checked~nav .menu {
+            display: grid;
+        }
+    
+    }

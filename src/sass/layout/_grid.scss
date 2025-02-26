@@ -1,0 +1,30 @@
+@use "../base/_mixins";
+
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header header header"
+        "main main main main"
+        "footer footer footer footer";
+    grid-template-rows: auto 1fr auto;
+    min-height:100vh;
+   }
+
+@include mixins.respond(tablet){
+    .container{
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "header header"
+        "main main"
+        "footer footer";
+}}
+
+@include mixins.respond(mobile){
+   .container{ 
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}}
