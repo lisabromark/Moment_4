@@ -1,13 +1,15 @@
 @use "../base/_variables";
 
-@keyframes shadowText{
-    0%{
-text-shadow: 0px 0px 5px variables.$darker-color;
+@keyframes shadowText {
+    0% {
+        text-shadow: 0px 0px 5px variables.$darker-color;
     }
-    50%{
+
+    50% {
         text-shadow: 0px 0px 30px variables.$darker-color;
     }
-    100%{
+
+    100% {
         text-shadow: 0px 0px 5px variables.$darker-color;
     }
 
@@ -29,4 +31,3 @@ text-shadow: 0px 0px 5px variables.$darker-color;
         opacity: 0;
     }
 }
-

@@ -38,6 +38,17 @@ footer {
     padding: 1em;
 }
 
+#textAnimation{
+    border: 10px solid variables.$secondary-color;
+    outline: 2px solid black;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 100px;
+    color: white;
+    animation: shadowText 2s infinite alternate; //skuggar texten enligt keyframe shadowText
+}
+
 #dog{
     mix-blend-mode: multiply; //för lätt och snabbt göra en ljusare bakgrund genomskinlig: https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode
     position: relative;
@@ -47,17 +58,23 @@ footer {
     opacity: 0; //så att bilden inte syns från början
 }
 
-//lägger till en klass .animateDog som kommer att läggas till på img när javascript körs, för att undvika hårdkodning i javascript
+//lägger till en klass .animateDog som kommer att läggas till på img med id="dog" när javascript körs
 .animateDog {
-    animation: runningDog 4s ease-in-out infinite;
+    animation: runningDog 4s ease-in-out infinite; //animering enligt keyframe runningDog
 }
 
 
-#textAnimation{
-    border: 2px solid black;
-    display: inline-block;
+#buttonAnimation{
+    margin-top: -50px;
+}
+
+#getDogButton{
+    background-color: variables.$secondary-color;
+    cursor: pointer;
+    border-radius: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px; 
     padding-left: 10px;
     padding-right: 10px;
-    color: variables.$lighter-color;
-    animation: shadowText 2s infinite alternate;
-}
+    font-size:1.2em;
+   }
